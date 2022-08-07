@@ -2,7 +2,7 @@
 
 - [智能气功学](about.md)
   - [前言](preface.md)
-  - [全书目录](index.md)
+  - [全书目录](indexes.md)
 
 ------
 
