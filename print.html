@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>中华智能气功</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="《简明智能气功学》">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="about.html"><strong aria-hidden="true">1.</strong> 智能气功学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="preface.html"><strong aria-hidden="true">1.1.</strong> 前言</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.2.</strong> 全书目录</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">第一章 智能气功学综述</li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 第一章 智能气功学综述</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="p2.html"><strong aria-hidden="true">2.1.</strong> p2</a></li><li class="chapter-item expanded "><a href="p3.html"><strong aria-hidden="true">2.2.</strong> p3</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">第八章 捧气贯顶法</li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 第八章 捧气贯顶法</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">中华智能气功</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="简明智能气功学"><a class="header" href="#简明智能气功学">《简明智能气功学》</a></h1>
+<p><img src="images/photo_2022-08-07_13-47-07.jpg" alt="cover" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="修订版前言"><a class="header" href="#修订版前言">修订版前言</a></h1>
+<p>《简明智能气功学》自1991年出版以来,受到了智能气功功友与气功界同道的欢迎。虽连续三次印刷发行，也只满足了一部分人的需要。鉴于智能气功科学的完整体系已经建立，做为中级教材亦必须予以进一步的充实与修订。修订与充实的主要内容有:</p>
+<p>(一)原版的《引言》对气功科学的主要特征只作了一般的描述，内容比较简单，已不能满足广大气功爱好者探究气功科学与发展气功事业的需要。此次修订用师资班教材《气功科学概论》中的主要内容以充实之，命名为“气功科学综述”并移入正文,即本书的第二章。</p>
+<p>(二)原版中的智能气功学的基础知识,分为《中国古典人体生命整体观》与《混元气理论简介》两章介绍，两文都是根据我在1985 年至1987 年的讲课内容整理写成的。整体观理论主要以介绍传统气功理论的有关内容为主,混元气理论则对传统气功的混元气理论予以较大发展。这对智能气功从传统气功中脱颖而出并使世人易于接受，无疑起到了积极促进作用,因此文中内容尽量保持与传统气功的一致性。然而智能气功科学的建立必须使传统气功发生翻天覆地的变化,而这一变化又必须从基础理论做起，所以当人们对智能气功的理法有了初步认识并开始接受以后,就有必要将我们创立的并被实践证明是正确的崭新的混元整体理论公诸于世了。现在，该理论已做为在师资班的一门课程讲授。全部内容共分七章，混元整体观综述、混元论、整体论、人体混元气、意识论、道德论、混元诊疗理论，共25余万字。它是建立智能气功科学大厦的基础。为了使广大智能气功爱好者能及时地对该理论有更概要的了解，此次修订把混元整体理论的核心内容--混元论、整体论、人体混元气--作了简明扼要的阐述，望读者对此要认真学习,反复玩味。</p>
+<p>(三)原版中无五元庄的内容，鉴于五元庄已于1991年在全国推广,为了满足与方便大家练功、学习的需要，故把五元庄的功理、功法续于形神庄之后。这样，使智能动功的三大功法汇集于一书，使这部中级教材臻于完备。</p>
+<p>以上是对此次修订作的几点说明，另外，我还想借《简明智能气功学》修订之机，向广大智能气功爱好者说几句话,供大家参考。</p>
+<p>每个习练智能气功的人都必须明确,练功是全面提高自己身心素质的艰苦过程，它所涉及的不仅是一个简单地治病强身的方法，而是一门高级、复杂的科学。诚然，过去(现在也有)把气功神秘化是错误的，对此我曾多次以《神秘气功不神秘》为题到全国各地作专题报告以纠正之;不幸的是,在纠正气功神秘化、繁琐化的时刻，有的人为满足不了解气功的人们的急功近利的心理要求，把气功与气功科学过于简单化,我们认为这是又一错误倾向。“真传一张纸,假传万卷书”这一很早就有的说法，是对练功的具体功法即练功决窍而言的，它在传统气功中属于“求而非道”的层次;在气功科学中它只是方法学中的具体方法的范畴,与气功科学是不可同日语的。做为气功科学必须从理论层次入手,否则气功只能停留在一法一术的原始境地。至于现在有些人利用智能气功的“组场”的神奇效应与意念治病的特殊性(有相当意志力的人只要懂得了道理,当时即可给人治病--当然功力的增高也需练功夫作保证)来标榜自己,确实给一些初练气功者造成了混乱,使很多人错误地认为,气功不需要练,也不需要理论，只要听“组场”带功报告就行了。我们说，组场确实能解决不少问题，但它不能代替练功。我们搞组场是让参加组场的人体会到“气”的巨大威力,从而使之增强对气功的信赖，这一信心是练好气功的基础。然而它只是基础而已,不练功是不能建成气功科学这座大厦的。
+希望智能气功的功友们,要脚踏实地练功,练功要求实效,不要追求一些华而不实的东西,不抱幻想,不凭侥倖、不自欺欺人,亦勿受人欺骗,要以修学科学的认真态度来修学气功这门科学,能如此必定有成。祝愿大家沿着气功科学的大道,迅猛前进!</p>
+<p>庞明</p>
+<p>1992年10月于秦皇岛</p>
+<p><img src="images/photo_2022-08-07_13-47-30.jpg" alt="" /></p>
+<p><img src="images/photo_2022-08-07_13-48-44.jpg" alt="" /></p>
+<p><img src="images/photo_2022-08-07_13-50-14.jpg" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="全书目录"><a class="header" href="#全书目录">全书目录</a></h1>
+<p><img src="images/doc00894420220601183745-1.png" alt="" /></p>
+<p><img src="images/doc00894620220601184135-0.png" alt="" /></p>
+<p><img src="images/doc00894620220601184135-1.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="images/doc00894820220601184354-0.png" alt="p2" /></p>
+<p>第一章
+智能气功学综述
+在气功科学中,气功、气功学、气功科学是三个不
+司的但又紧密相关的概念与称谓,气功是三者的核心｡照
+体例,智能气功也就相应地有了智能气功、智能气功
+学､智能气功科学的称谓。由于智能气功是三者的核心,
+所以本章虽名为智能气功学综述,却从智能气功谈起。
+第一节 智能气功简介</p>
+<ol>
+<li>智能气功的概念
+智能气功是气功百花园中的一株,因此在未介绍智
+能气功之前,有必要先了解、认识气功的内涵。
+一、气功的定义
+气功是建立在古典的整体生命观的理论基础上通过
+主动地内向性运用意识活动的锻炼,改造、完美、提高
+人体的生命功能——把自然的本能变为自觉的智能的实
+践。这个定义指明了气功的理论基础,讲清了气功特殊
+的锻炼方法和锻炼内容,描绘出了气功的锻炼目的。这
+个定义包含了气功的全部特征。
+(一)指出了气功的理论基础——古典的整体生命观
+(智能气功是混元整体观)。其内容包括:
+2</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
